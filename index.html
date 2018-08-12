@@ -1,0 +1,69 @@
+    <!doctype html> 
+    <html lang="en"> 
+    <head> 
+    <meta charset="utf-8"> 
+    <title>Unit Conversion</title> 
+    <style>  
+    body{padding-top:30px;} 
+    label,input{display:block;}  
+    </style> 
+    </head> 
+    <body> 
+       
+        <h1>CALCULATE YOUR BODY MASS INDEX</h1>
+    <p> What is your Height?</p> 
+    <form action="" method="post" id="MyForm"> 
+        <!-- Height feet -->
+    <label for="Height-feet">ft</label><input type="text" name="Height-feet" id="Height-feet" required>
+
+          <!-- Height inches -->
+    <label for="Height-inch">in</label><input type="text" name="Height-inch" id="Height-inch" required>
+
+        <!-- weight -->
+        <p> What is your Weight?</p> 
+    <label for="Weight">lb</label><input type="text" name="Weight" id="Weight" required>  
+        <!-- bmi -->
+
+    <label for="bmi">Gal</label><input type="text" name="bmi" id="bmi"> 
+
+    <input type="submit" value="Calculate" id="submit">    </form> 
+     <!-- <p>Convert feet to psi</p>
+    <form action="" method="post" id="MyForm1"> 
+    <label for="feet">feet</label><input type="text" name="feet" id="feet" required> 
+    <label for="psi">psi</label><input type="text" name="psi" id="psi"> 
+    <input type="submit" value="Calculate" id="submit">    </form>  -->
+<script type="text/javascript">
+// this is function for converting ft^3 to gal
+function bmi(){
+var bmi;
+var height;
+var feet = document.getElementById('Height-feet').value;
+var inch = document.getElementById('Height-inch').value;
+var weight = document.getElementById('Weight').value;
+feet = Math.abs(feet);
+inch = Math.abs(inch);
+weight = Math.abs(weight);
+height = feet + (inch/12);
+bmi = (weight * 0.453592) / (height * height * 0.3048 * 0.3048);
+bmi = bmi.toFixed(2);
+
+// round((weight * 0.453592) / (height * height * 0.3048 * 0.3048), 2))
+document.getElementById('bmi').value = bmi;
+return false;
+}
+window.onload = document.getElementById('MyForm').onsubmit = bmi;
+// // this is function for converting feet to psi
+// function feettopsi(){
+// var psi;
+// var feet = document.getElementById('feet').value;
+// feet = Math.abs(feet);
+// psi = 1.0 * feet/2.31;
+// psi = psi.toFixed(2);
+// document.getElementById('psi').value = psi;
+// return false;
+// }
+// window.onload = document.getElementById('MyForm1').onsubmit = feettopsi;
+</script>
+
+    </body> 
+    </html> 
