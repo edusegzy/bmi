@@ -9,15 +9,30 @@
     </style> 
     </head> 
     <body> 
+        <center>
        
         <h1>CALCULATE YOUR BODY MASS INDEX</h1>
     <p> What is your Height?</p> 
     <form action="" method="post" id="MyForm"> 
+         <div class="row">
+    <div class="col">
         <!-- Height feet -->
-    <label for="Height-feet">ft</label><input type="text" name="Height-feet" id="Height-feet" required>
+    <label for="Height-feet">ft</label><input type="text" name="Height-feet" class="form-control" id="Height-feet" required>
 
           <!-- Height inches -->
-    <label for="Height-inch">in</label><input type="text" name="Height-inch" id="Height-inch" required>
+    <label for="Height-inch">in</label><input type="text" name="Height-inch" class="form-control" id="Height-inch" required>
+        
+         </div>
+  </div>
+        
+<!--           <div class="row">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="First name">
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Last name">
+    </div>
+  </div> -->
 
         <!-- weight -->
         <p> What is your Weight?</p> 
@@ -64,6 +79,6 @@ window.onload = document.getElementById('MyForm').onsubmit = bmi;
 // }
 // window.onload = document.getElementById('MyForm1').onsubmit = feettopsi;
 </script>
-
+</center>
     </body> 
     </html> 
